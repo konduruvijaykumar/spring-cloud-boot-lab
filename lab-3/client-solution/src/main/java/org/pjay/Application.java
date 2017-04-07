@@ -38,4 +38,15 @@ public class Application {
 	//	2017-04-06 20:02:44.292  INFO 1168 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 	//	2017-04-06 20:02:44.292  INFO 1168 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
 	//	2017-04-06 20:02:44.363  INFO 1168 --- [  restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+	
+	
+	// VM args change for running with profile without changing bootstrap yml or properties file to add profiles
+	// -Dspring.profiles.active=northamerica
+	// Might be lab-3-client-northamerica.properties was first to read from repo, this file was taken for rendering data. We get "The lucky word is: World of Vjay" from controller
+	
+	// Logs: after changing VM args
+	//	2017-04-07 05:55:13.575  INFO 15824 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8001
+	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab-3-client, profiles=[northamerica], label=master, version=adf56e4a82042f3ce5a82370111fac167ec7f535, state=null
+	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client-northamerica.properties'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client-northamerica.yml'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client.yml']]]
+	//	2017-04-07 05:55:23.882  INFO 15824 --- [  restartedMain] org.pjay.Application                     : The following profiles are active: northamerica
 }

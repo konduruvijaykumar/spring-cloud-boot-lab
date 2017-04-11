@@ -47,4 +47,5 @@ public class Application {
 	//	2017-04-12 00:01:22.366  INFO 6880 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab3-client, profiles=[northamerica], label=master, version=6612802f0d1b4336caea893ece3904b3c5b7330b, state=null
 	//	2017-04-12 00:01:22.373  INFO 6880 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client-northamerica.properties'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client-northamerica.yml'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client.yml']]]
 	//	2017-04-12 00:01:22.389  INFO 6880 --- [  restartedMain] org.pjay.Application                     : The following profiles are active: northamerica
+
 }

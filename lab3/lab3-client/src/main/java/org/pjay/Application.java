@@ -12,8 +12,8 @@ public class Application {
 	
 	// Logs:
 	//	2017-04-06 20:02:31.934  INFO 1168 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8001
-	//	2017-04-06 20:02:40.533  INFO 1168 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab-3-client, profiles=[default], label=master, version=681b5e4f1b60225649d0c5146620ca5f3c7692f4, state=null
-	//	2017-04-06 20:02:40.534  INFO 1168 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client.yml']]]
+	//	2017-04-06 20:02:40.533  INFO 1168 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab3-client, profiles=[default], label=master, version=681b5e4f1b60225649d0c5146620ca5f3c7692f4, state=null
+	//	2017-04-06 20:02:40.534  INFO 1168 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client.yml']]]
 	//	2017-04-06 20:02:40.546  INFO 1168 --- [  restartedMain] org.pjay.Application                     : No active profile set, falling back to default profiles: default
 	//	2017-04-06 20:02:40.677  INFO 1168 --- [  restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f9cec48: startup date [Thu Apr 06 20:02:40 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@2b112d8e
 	//	2017-04-06 20:02:42.134  WARN 1168 --- [  restartedMain] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
@@ -42,11 +42,11 @@ public class Application {
 	
 	// VM args change for running with profile without changing bootstrap yml or properties file to add profiles
 	// -Dspring.profiles.active=northamerica
-	// Might be lab-3-client-northamerica.properties was first to read from repo, this file was taken for rendering data. We get "The lucky word is: World of Vjay" from controller
+	// Might be lab3-client-northamerica.properties was first to read from repo, this file was taken for rendering data. We get "The lucky word is: World of Vjay" from controller
 	
 	// Logs: after changing VM args
 	//	2017-04-07 05:55:13.575  INFO 15824 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8001
-	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab-3-client, profiles=[northamerica], label=master, version=adf56e4a82042f3ce5a82370111fac167ec7f535, state=null
-	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client-northamerica.properties'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client-northamerica.yml'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab-3-client.yml']]]
+	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lab3-client, profiles=[northamerica], label=master, version=adf56e4a82042f3ce5a82370111fac167ec7f535, state=null
+	//	2017-04-07 05:55:23.845  INFO 15824 --- [  restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client-northamerica.properties'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client-northamerica.yml'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lab3-client.yml']]]
 	//	2017-04-07 05:55:23.882  INFO 15824 --- [  restartedMain] org.pjay.Application                     : The following profiles are active: northamerica
 }

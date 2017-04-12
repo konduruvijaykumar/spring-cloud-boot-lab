@@ -132,5 +132,17 @@ public class Lab4EurekaServerApplication {
 	//	2017-04-12 08:58:35.824  INFO 16048 --- [22)-192.168.1.3] c.n.eureka.DefaultEurekaServerContext    : Shut down
 	//	2017-04-12 08:58:36.019  INFO 16048 --- [22)-192.168.1.3] o.apache.catalina.core.StandardService   : Stopping service Tomcat
 	//	2017-04-12 08:58:36.023  INFO 16048 --- [ost-startStop-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+	
+	
+	// Logs after registering one service:
+	//	2017-04-12 10:20:46.955  INFO 10108 --- [nio-8010-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 72 ms
+	//	2017-04-12 10:20:47.884  INFO 10108 --- [nio-8010-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/DESKTOP-02EQ34S:0 with status UP (replication=false)
+	//	2017-04-12 10:21:02.941  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+	//	2017-04-12 10:22:02.945  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
+	//	2017-04-12 10:23:02.957  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
+	//	2017-04-12 10:23:59.517  WARN 10108 --- [eerNodesUpdater] c.n.eureka.cluster.PeerEurekaNodes       : The replica size seems to be empty. Check the route 53 DNS Registry
+	//	2017-04-12 10:24:02.958  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+	//	2017-04-12 10:25:02.966  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+	//	2017-04-12 10:26:02.980  INFO 10108 --- [a-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
 
 }

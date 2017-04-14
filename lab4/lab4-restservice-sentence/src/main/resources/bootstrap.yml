@@ -1,0 +1,8 @@
+# We will finally write one genralized file for all in the form of one application with different profiles
+# We will write one single codebase performs generating of subject, verb, article, adjective, and noun, plus sentence assembly.
+
+---
+spring:
+  profiles: sentence
+  application:
+    name: lab4-restservice-sentence

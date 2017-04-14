@@ -1,0 +1,13 @@
+# We will finally write one genralized file for all in the form of one application with different profiles
+# We will write one single codebase performs generating of subject, verb, article, adjective, and noun, plus sentence assembly.
+
+---
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8010/eureka/
+
+words: boat,book,vote,seat,backpack,partition,groundhog
+
+server:
+  port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.

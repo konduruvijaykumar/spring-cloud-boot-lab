@@ -1,0 +1,45 @@
+# Depending on which profile is active, the application gives 
+# itself a different name when registering with Eureka
+---
+spring:
+  profiles: sentence
+  application:
+    name: lab4-restservice-sentence
+    
+---
+spring:
+  profiles: subject
+  application:
+    name: lab4-restservice-subject
+  
+---
+spring:
+  profiles: verb
+  application:
+    name: lab4-restservice-verb
+
+---
+spring:
+  profiles: article
+  application:
+    name: lab4-restservice-article
+
+---
+spring:
+  profiles: adjective
+  application:
+    name: lab4-restservice-adjective
+
+---
+spring:
+  profiles: noun
+  application:
+    name: lab4-restservice-noun
+ 
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+
+ 

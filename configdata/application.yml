@@ -31,9 +31,9 @@ spring:
   profiles: noun
 words: boat,book,vote,seat,backpack,partition,groundhog
 
----
-# This a fix or hack for clubing all word and sentence rest services into one project. As word controller throws error for words property
-# This can also be fixed with property words in the main restsevices-all project for sentence profile you can choose any one of both
-spring:
-  profiles: sentence 
-words: NotApplicable
+#---
+## This a fix or hack for clubing all word and sentence rest services into one project. As word controller throws error for words property
+## This can also be fixed with property words in the main restsevices-all project for sentence profile you can choose any one of both
+#spring:
+#  profiles: sentence 
+#words: NotApplicable

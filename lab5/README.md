@@ -6,4 +6,5 @@ I have created all services under common folder. Please use this to execute firs
 
 **For Part 2, Modify sentence server to use Ribbon**
 
-Try code from lab5, for eureka and config server use code from common.
+For eureka, config server and all word server instance use code from common.
+We will start extra noun word server and sentence server from lab5 folder.

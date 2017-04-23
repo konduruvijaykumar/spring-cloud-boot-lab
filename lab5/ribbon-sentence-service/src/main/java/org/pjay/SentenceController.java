@@ -26,13 +26,11 @@ public class SentenceController {
 	 */
 	@RequestMapping("/sentence")
 	public String getSentence() {
-	  return 
-		"<h3>Some Sentences</h3><br/>" +	  
-		buildSentence() + "<br/><br/>" +
-		buildSentence() + "<br/><br/>" +
-		buildSentence() + "<br/><br/>" +
-		buildSentence() + "<br/><br/>" +
-		buildSentence() + "<br/><br/>";
+		// Taking a lot of time so reducing to 2 or 3 calls of sentence formation, found that noun server was not responding. Hence was taking lot of time
+		// With only ribbon service call, application was not failing and not showing response for long time if one of the server is not working. Hence we need a circuit breaker to solve this problem
+		// return "<h3>Some Sentences</h3><br/>" + buildSentence() + "<br/><br/>" + buildSentence() + "<br/><br/>";
+		return "<h3>Some Sentences</h3><br/>" + buildSentence() + "<br/><br/>" + buildSentence() + "<br/><br/>"
+				+ buildSentence() + "<br/><br/>" + buildSentence() + "<br/><br/>" + buildSentence() + "<br/><br/>";
 	}
 
 	/**
@@ -51,6 +49,7 @@ public class SentenceController {
 		} catch ( Exception e ) {
 			System.out.println(e);
 		}
+		System.out.println("sentence :: " + sentence);
 		return sentence;
 	}
 

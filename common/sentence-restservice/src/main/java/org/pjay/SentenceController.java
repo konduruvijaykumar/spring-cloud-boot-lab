@@ -39,7 +39,7 @@ public class SentenceController {
 		// service is the key value of microservices registered with Eureka
 		System.out.println(discoveryClient.getServices().toString());
 		// OutPut For Above::
-		// [word-restservices-adjective, word-restservices-subject, word-restservices-verb, word-restservices-article, word-restservices-noun, word-restservices-sentence]
+		// [word-restservices-noun, word-restservices-verb, word-restservices-subject, word-restservices-adjective, word-restservices-article, sentence-restservice-sentence]
 		// Only root service "/" registered. Hence the uri should be formed with the extra uri pattern manually here as below test end points does
 		List<ServiceInstance> instanceInfos = discoveryClient.getInstances(service);
 		if(null != instanceInfos && instanceInfos.size() > 0){

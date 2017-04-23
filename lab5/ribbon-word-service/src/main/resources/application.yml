@@ -1,0 +1,9 @@
+
+---
+server:
+  port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.
+
+
+# Note: all properties defined in this file are subject to replacement by the configuration server.
+---
+words: fallback

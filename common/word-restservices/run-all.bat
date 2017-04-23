@@ -21,13 +21,13 @@
 :: verify test.bat file for more info on timeout
 
 start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=subject"
-timeout /t 15 > NUL
+timeout /t 20 > NUL
 start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=verb"
-timeout /t 15 > NUL
+timeout /t 20 > NUL
 start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=article"
-timeout /t 15 > NUL
+timeout /t 20 > NUL
 start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=adjective"
-timeout /t 15 > NUL
+timeout /t 20 > NUL
 start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=noun"
 :: sentence is now part of different webservice in commons project so commenting it
 ::start call mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=sentence"

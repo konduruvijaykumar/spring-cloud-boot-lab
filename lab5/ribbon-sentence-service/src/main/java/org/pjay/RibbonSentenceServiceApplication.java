@@ -78,4 +78,9 @@ public class RibbonSentenceServiceApplication {
 	//	2017-04-23 15:09:44.114  INFO 14332 --- [erListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: WORD-RESTSERVICES-ARTICLE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 	//	2017-04-23 15:09:44.284  INFO 14332 --- [erListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: WORD-RESTSERVICES-ADJECTIVE.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 	//	2017-04-23 15:09:44.381  INFO 14332 --- [erListUpdater-1] c.netflix.config.ChainedDynamicProperty  : Flipping property: WORD-RESTSERVICES-NOUN.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+	
+	// Note::
+	// The behavior of sentence service will happen as per Screeshot-after-one-noun-instance-stoped-shows-round-robin-loadbalance-1 and Screeshot-after-one-noun-instance-stoped-shows-round-robin-loadbalance-2
+	// If you continue refreshing long enough, you will see that the failures eventually stop as the ribbon client becomes updated with the revised server list from Eureka
+	
 }

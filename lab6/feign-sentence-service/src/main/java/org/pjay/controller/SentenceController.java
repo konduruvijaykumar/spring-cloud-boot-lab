@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.pjay;
+package org.pjay.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;

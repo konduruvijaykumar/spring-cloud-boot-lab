@@ -1,0 +1,52 @@
+# Depending on which profile is active, the application gives 
+# itself a different name when registering with Eureka
+
+#---
+## Now we have moved sentence webservice to a different project so commenting below lines
+#spring:
+#  profiles: sentence
+#  application:
+#    name: word-restservices-sentence
+
+## Allow Eureka to recognize two apps of the same type on the same host as separate instances:
+#eureka:
+#  instance:
+#    metadataMap:
+#      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    
+---
+spring:
+  profiles: subject
+  application:
+    name: word-restservices-subject
+  
+---
+spring:
+  profiles: verb
+  application:
+    name: word-restservices-verb
+
+---
+spring:
+  profiles: article
+  application:
+    name: word-restservices-article
+
+---
+spring:
+  profiles: adjective
+  application:
+    name: word-restservices-adjective
+
+---
+spring:
+  profiles: noun
+  application:
+    name: word-restservices-noun
+ 
+---
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+

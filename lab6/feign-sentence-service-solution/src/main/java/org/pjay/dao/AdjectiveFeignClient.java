@@ -18,7 +18,7 @@ public interface AdjectiveFeignClient {
 	@RequestMapping(value="/", method=RequestMethod.GET)
 	public Word getWord();
 	
-	// Not sure if we are using this in lab6 this might be done in next lab when working on hystrix
+	// Not sure if we are using this in lab6. This might be done in next lab when working on hystrix
 	static class HystrixClientFallback implements AdjectiveFeignClient{
 
 		@Override

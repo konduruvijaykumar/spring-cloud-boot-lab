@@ -1,6 +1,6 @@
 
 ---
-# Below eureka service url is not required as we are config server for this and it is configured in bootstrap.yml
+# Below eureka service url is not required as we are using config server for this and it is configured in bootstrap.yml
 #eureka:
 #  client:
 #    service-url:

@@ -103,6 +103,19 @@
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 	    </dependency>
+	    
+	    <!-- Not sure if we need this dependency, hence commenting it. This is present in lab7 tutorial from instructor -->
+		<!-- <dependency>
+			<groupId>org.apache.ant</groupId>
+			<artifactId>ant</artifactId>
+			<version>1.9.3</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.wimpi</groupId>
+			<artifactId>telnetd-x</artifactId>
+			<version>2.1.1</version>
+		</dependency> -->
 
 	</dependencies>
 

@@ -15,8 +15,7 @@ import org.springframework.stereotype.Service;
  * @author vijayk
  *
  * Build a sentence by assembling randomly generated subjects, verbs,
- * articles, adjectives, and nouns. The individual parts of speech will
- * be obtained by calling the various DAOs.
+ * articles, adjectives, and nouns.
  * 
  */
 @Service

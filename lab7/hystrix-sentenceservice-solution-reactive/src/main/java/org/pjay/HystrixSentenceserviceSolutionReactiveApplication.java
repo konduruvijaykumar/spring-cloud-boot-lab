@@ -22,10 +22,11 @@ public class HystrixSentenceserviceSolutionReactiveApplication {
 		SpringApplication.run(HystrixSentenceserviceSolutionReactiveApplication.class, args);
 	}
 	
-	// Create a Thread pool executor bean with size of thread pool as 6
-	// Not sure why six times we are trying to phrase, you can keep it based on how many sentences you want to show.
+	// Create a Thread pool executor bean with size of thread pool as 6. I am expecting it to be 5 as we call five word services
+	// Need to test and check
 	@Bean
 	public Executor getThreadPoolExecutor(){
-		return Executors.newFixedThreadPool(6);
+		//return Executors.newFixedThreadPool(6);
+		return Executors.newFixedThreadPool(5);
 	}
 }

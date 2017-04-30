@@ -10,11 +10,13 @@ import org.pjay.dao.SubjectFeignClient;
 import org.pjay.dao.VerbFeignClient;
 import org.pjay.model.Word;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * @author vijayk
  *
  */
+@Service
 public class WordServiceImpl implements WordService {
 	
 	@Autowired

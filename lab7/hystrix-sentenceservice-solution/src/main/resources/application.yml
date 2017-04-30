@@ -1,0 +1,17 @@
+
+---
+# Below eureka service url is not required as we are using config server for this and it is configured in bootstrap.yml
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8010/eureka/
+
+spring:
+  profiles: sentence
+
+server:
+  port: 8020
+# Fix the sentence server to 8020.  This makes it easy to find.
+
+# It's ok to comment here as this is seperate sentence service and has no word controller involved to throw error
+#words: NotApplicable

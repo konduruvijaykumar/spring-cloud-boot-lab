@@ -19,7 +19,7 @@ public class SentenceController {
 	SentenceService sentenceService;
 	
 	/**
-	 * Display a small list of Sentences to the caller:
+	 * Display a small list of Sentences to the caller
 	 */
 	@RequestMapping("/sentence")
 	public String getSentence() {

@@ -1,12 +1,31 @@
 package org.pjay;
 
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
+@EnableDiscoveryClient
+@EnableFeignClients
+@EnableHystrix
+@EnableHystrixDashboard
 public class HystrixSentenceserviceSolutionReactiveApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(HystrixSentenceserviceSolutionReactiveApplication.class, args);
+	}
+	
+	// Create a Thread pool executor bean with size of thread pool as 6
+	// Not sure why six times we are trying to phrase, you can keep it based on how many sentences you want to show.
+	@Bean
+	public Executor getThreadPoolExecutor(){
+		return Executors.newFixedThreadPool(6);
 	}
 }

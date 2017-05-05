@@ -16,7 +16,7 @@ public class GatewaySentenceserviceSolutionApplication {
 		SpringApplication.run(GatewaySentenceserviceSolutionApplication.class, args);
 	}
 	
-	// Not need for this project
+	// Not needed for this project
 	// Etags used for caching data, instead of rebuilding response.
 	// When server sends response for the first time, it calculates hash for the object and sends it to browser via etags
 	// When browser requests for the object again the server will verify if browser sent hash via etag is same for the object response produced

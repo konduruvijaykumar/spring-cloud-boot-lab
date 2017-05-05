@@ -3,14 +3,16 @@
  */
 package org.pjay;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author vijayk
  *
  */
-@RestController
+// Not a rest controller, we are using this as spring mvc app with sentence.html loaded from templates
+//@RestController
+@Controller
 public class SentenceController {
 	
 	@RequestMapping("/")

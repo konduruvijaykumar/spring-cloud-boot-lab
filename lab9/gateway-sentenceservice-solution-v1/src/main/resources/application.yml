@@ -57,7 +57,8 @@ zuul:
   prefix: /api
   routes:
     verb: 
-      path: /verb/**
+      path: /verb-service/**
+      #path: /verb/**
     gateway: 
       path: /gateway-service/**
     # We don't have to for every thing, default value taken from eureka server. This can be used to cutomize url endpoint

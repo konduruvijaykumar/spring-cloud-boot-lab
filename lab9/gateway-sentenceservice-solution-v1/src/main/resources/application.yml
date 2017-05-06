@@ -1,0 +1,70 @@
+---
+# Allow thymeleaf template changes to reload:
+spring.thymeleaf.cache: false
+
+# Zuul-proxied services can be found by calling /services/subject, /services/verb, etc.
+#zuul:
+#  prefix: /services
+#  #prefix: /api   # Then we call /api/subject, /api/verb, etc.
+
+# http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 8000 # 8 secs, it can be increased based on need
+
+ribbon:
+  ConnectTimeout: 4000
+  ReadTimeout: 8000
+
+## Test below commented properties to verify if they are working properly
+
+#zuul:
+#  prefix: /api
+#  #ignoredServices: '*' # To skip having a service automatically added by zuul from eureka server '*' -- will ignore all services. So you have to add routes which ever needed respectively with routes
+#  #ignoredServices: verb
+#  # To skip having a service automatically added by zuul from eureka server, here only verb service is ignored. ignoredServices property is as set of strings.
+#  # Hence we can give comma seperated others services. This needs to be tested if working
+  
+#zuul:
+#  prefix: /api
+#  # To skip having a service automatically added by zuul from eureka server, here only verb service is ignored. ignoredServices property is as set of strings.
+#  # Hence we can give comma seperated others services. This needs to be tested if working
+#  ignoredServices: subject, adjective
+##  routes:
+##    verb: /verb/**
+#  routes:
+#    verb: 
+#      path: /verb/** # we can even change the name to some other like /verb-service/**
+#      serviceId: verb-serviceid
+#      stripPrefix: false
+#    noun:
+#      path: /noun/** # we can even change the name to some other like /noun-service/**
+#      serviceId: noun-serviceid
+#      stripPrefix: false
+
+#zuul:
+#  prefix: /api
+#  routes:
+#    verb: /verb/**
+#    gateway: /gateway/**
+
+zuul:
+  prefix: /api
+  routes:
+    verb: 
+      path: /verb/**
+    gateway: 
+      path: /gateway-service/**
+    # We don't have to for every thing, default value taken from eureka server. This can be used to cutomize url endpoint
+  
+
+
+#logging:
+#  level:
+#    ROOT: INFO
+#    org.springframework.web: DEBUG

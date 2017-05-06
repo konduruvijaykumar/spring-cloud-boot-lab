@@ -11,12 +11,14 @@ import org.springframework.web.filter.ShallowEtagHeaderFilter;
 /**
  * @author vijayk
  *
+ * http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
  * http://ryanjbaxter.com/cloud/spring%20cloud/spring/2016/10/27/hystrix-fallbacks-with-zuul.html
  * https://github.com/spring-cloud/spring-cloud-netflix/blob/master/docs/src/main/asciidoc/spring-cloud-netflix.adoc#providing-hystrix-fallbacks-for-routes
  * https://github.com/spring-cloud-samples/zuul-server
  * https://github.com/spring-cloud-samples/zuul-server/blob/master/src/main/java/zuulserver/ZuulServerApplication.java
  * http://stackoverflow.com/questions/42216079/zuul-implementing-multiple-zuulfallbackprovider-for-multiple-zuul-routes
  * http://tachniki.blogspot.in/2017/02/generic-ZuulFallbackProvider.html
+ * https://github.com/spring-cloud/spring-cloud-netflix/issues/1283
  * 
  */
 @SpringBootApplication

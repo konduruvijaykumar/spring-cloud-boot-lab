@@ -29,7 +29,7 @@
 	//	TODO: Alter this prefix when instructed.
 	//var prefix = "";
 	// Depends on what prefix name is given in configuration for zuul, if given as api then use api instead of services
-	var prefix = "/services";
+	var prefix = "/api";
 
 	// Perform AJAX requests...
 	$.getJSON(prefix + "/subject",   null, displaySubject)  .fail(displayErrorSubject);

@@ -41,5 +41,22 @@ public class GatewaySentenceserviceSolutionV1Application {
         return new ShallowEtagHeaderFilter();
     }
     
+    // Logs:: 
+	//    2017-05-06 13:27:27.346  INFO 8380 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY/DESKTOP-02EQ34S:gateway: registering service...
+	//    2017-05-06 13:27:27.394  INFO 8380 --- [nfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_GATEWAY/DESKTOP-02EQ34S:gateway - registration status: 204
+	//    2017-05-06 13:27:27.502  INFO 8380 --- [  restartedMain] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+	//    2017-05-06 13:27:27.508  INFO 8380 --- [  restartedMain] ration$HystrixMetricsPollerConfiguration : Starting poller
+	//    2017-05-06 13:27:27.627  INFO 8380 --- [  restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+	//    2017-05-06 13:27:27.629  INFO 8380 --- [  restartedMain] c.n.e.EurekaDiscoveryClientConfiguration : Updating port to 8080
+	//    2017-05-06 13:27:27.637  INFO 8380 --- [  restartedMain] ewaySentenceserviceSolutionV1Application : Started GatewaySentenceserviceSolutionV1Application in 16.682 seconds (JVM running for 17.791)
+	//    2017-05-06 13:27:34.990  INFO 8380 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+	//    2017-05-06 13:27:34.990  INFO 8380 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+	//    2017-05-06 13:27:35.038  INFO 8380 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/verb/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/gateway-service/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/article/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/subject/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/adjective/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
+	//    2017-05-06 13:27:35.082  INFO 8380 --- [nio-8080-exec-1] o.s.c.n.zuul.web.ZuulHandlerMapping      : Mapped URL path [/api/noun/**] onto handler of type [class org.springframework.cloud.netflix.zuul.web.ZuulController]
     
 }

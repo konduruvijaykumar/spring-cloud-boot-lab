@@ -8,18 +8,24 @@ spring.thymeleaf.cache: false
 #  #prefix: /api   # Then we call /api/subject, /api/verb, etc.
 
 # http://cloud.spring.io/spring-cloud-netflix/spring-cloud-netflix.html
+# https://github.com/spring-cloud/spring-cloud-netflix/issues/321
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 8000 # 8 secs, it can be increased based on need
+# Disable Hystrix timeout globally (for all services)
+# hystrix.command.default.execution.timeout.enabled: false
 
-ribbon:
-  ConnectTimeout: 4000
-  ReadTimeout: 8000
+#hystrix:
+#  command:
+#    default:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 30000 # 30 secs, it can be increased based on need
+#        timeout:
+#          enabled: false
+
+#ribbon:
+#  ConnectTimeout: 1000
+#  ReadTimeout: 30000
 
 ## Test below commented properties to verify if they are working properly
 
@@ -55,13 +61,13 @@ ribbon:
 
 zuul:
   prefix: /api
-  routes:
-    verb: 
-      path: /verb-service/**
-      #path: /verb/**
-    gateway: 
-      path: /gateway-service/**
-    # We don't have to for every thing, default value taken from eureka server. This can be used to cutomize url endpoint
+#  routes:
+#    verb: 
+#      path: /verb-service/**
+#      #path: /verb/**
+#    gateway: 
+#      path: /gateway-service/**
+#    # We don't have to for every thing, default value taken from eureka server. This can be used to cutomize url endpoint
   
 
 

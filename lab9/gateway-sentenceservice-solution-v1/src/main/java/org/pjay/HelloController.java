@@ -30,4 +30,14 @@ public class HelloController {
 		return "Hello " + name + " from gateway server via Query Param";
 	}
 	
+	@RequestMapping("/timeout")
+	public String delayResponse(){
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return "This is a response from delay thread";
+	}
+	
 }

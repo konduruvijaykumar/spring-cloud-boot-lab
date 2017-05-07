@@ -68,7 +68,14 @@ zuul:
 #    gateway: 
 #      path: /gateway-service/**
 #    # We don't have to for every thing, default value taken from eureka server. This can be used to cutomize url endpoint
-  
+
+#zuul:
+#  routes:
+#    subject: /subject/**
+#    verb: /verb/**
+#    article: /article/**
+#    adjective: /adjective/**
+#    noun: /noun/**
 
 
 #logging:

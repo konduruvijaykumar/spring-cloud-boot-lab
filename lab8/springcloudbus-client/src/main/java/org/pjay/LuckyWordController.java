@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 // TODO: Add @ConfigurationProperties here.
 // The data in below fields will not be populated as the properties are "wordConfig.preamble", "wordConfig.luckyWord".
 // This might work when you add @ConfigurationProperties with prefix property=wordConfig, Hence making changes as required to make it work
+// Note: When you make changes to configuration files, it is not reflected in client application. As the data is read during startup of server and is cached.
+// To refresh the configuration changes, we will see it next solution part 
 public class LuckyWordController {
 
 	// From Lab 3

@@ -154,4 +154,16 @@ public class SpringcloudbusClientSolutionApplication {
 	//		at java.lang.reflect.Constructor.newInstance(Unknown Source) ~[na:1.8.0_131]
 	//		at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142) ~[spring-beans-4.3.7.RELEASE.jar:4.3.7.RELEASE]
 	//		... 24 common frames omitted
+	
+	// Logs:: after POST bus/refresh method called on config server
+	//	2017-05-24 06:14:28.869  INFO 14100 --- [bquYtYKMPM4AQ-1] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1442d0ed: startup date [Wed May 24 06:14:28 IST 2017]; root of context hierarchy
+	//	2017-05-24 06:14:29.611  INFO 14100 --- [bquYtYKMPM4AQ-1] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$20e9db19] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+	//	2017-05-24 06:14:30.394  INFO 14100 --- [bquYtYKMPM4AQ-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at: http://localhost:8001
+	//	2017-05-24 06:14:35.401  INFO 14100 --- [bquYtYKMPM4AQ-1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=lucky-word-client, profiles=[default], label=master, version=ea6320c1b78cc2f515572023cc05e37e7e43ecc2, state=null
+	//	2017-05-24 06:14:35.402  INFO 14100 --- [bquYtYKMPM4AQ-1] b.c.PropertySourceBootstrapConfiguration : Located property source: CompositePropertySource [name='configService', propertySources=[MapPropertySource [name='configClient'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/lucky-word-client.yml'], MapPropertySource [name='https://github.com/konduruvijaykumar/spring-cloud-boot-lab/configdata/application.yml']]]
+	//	2017-05-24 06:14:35.405  INFO 14100 --- [bquYtYKMPM4AQ-1] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+	//	2017-05-24 06:14:35.438  INFO 14100 --- [bquYtYKMPM4AQ-1] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@54ec5629: startup date [Wed May 24 06:14:35 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1442d0ed
+	//	2017-05-24 06:14:36.577  INFO 14100 --- [bquYtYKMPM4AQ-1] o.s.boot.SpringApplication               : Started application in 9.437 seconds (JVM running for 1762.187)
+	//	2017-05-24 06:14:36.580  INFO 14100 --- [bquYtYKMPM4AQ-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@54ec5629: startup date [Wed May 24 06:14:35 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1442d0ed
+	//	2017-05-24 06:14:43.158  INFO 14100 --- [bquYtYKMPM4AQ-1] o.s.cloud.bus.event.RefreshListener      : Received remote refresh request. Keys refreshed [config.client.version, wordConfig.luckyWord]
 }

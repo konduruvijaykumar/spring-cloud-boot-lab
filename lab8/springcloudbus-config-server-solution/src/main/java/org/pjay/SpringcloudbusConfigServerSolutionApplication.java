@@ -154,4 +154,18 @@ public class SpringcloudbusConfigServerSolutionApplication {
 	//	2017-05-24 05:46:46.818  INFO 11936 --- [nio-8001-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Users/krishna/AppData/Local/Temp/config-repo-5181068114537061714/configdata/lucky-word-client.yml
 	//	2017-05-24 05:46:46.829  INFO 11936 --- [nio-8001-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Users/krishna/AppData/Local/Temp/config-repo-5181068114537061714/configdata/application.yml
 	//	2017-05-24 05:46:46.830  INFO 11936 --- [nio-8001-exec-2] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@69c1d9cb: startup date [Wed May 24 05:46:46 IST 2017]; root of context hierarchy
+	
+	// Logs:: after POST bus/refresh method called on config server
+	//	2017-05-24 06:14:27.900  INFO 11936 --- [io-8001-exec-10] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1d5ea518: startup date [Wed May 24 06:14:27 IST 2017]; root of context hierarchy
+	//	2017-05-24 06:14:28.948  INFO 11936 --- [io-8001-exec-10] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [class org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$b0dd72d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+	//	2017-05-24 06:14:30.307  INFO 11936 --- [io-8001-exec-10] o.s.boot.SpringApplication               : No active profile set, falling back to default profiles: default
+	//	2017-05-24 06:14:30.336  INFO 11936 --- [io-8001-exec-10] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@300899fc: startup date [Wed May 24 06:14:30 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1d5ea518
+	//	2017-05-24 06:14:30.789  INFO 11936 --- [io-8001-exec-10] o.s.boot.SpringApplication               : Started application in 9.53 seconds (JVM running for 1820.222)
+	//	2017-05-24 06:14:30.790  INFO 11936 --- [io-8001-exec-10] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@300899fc: startup date [Wed May 24 06:14:30 IST 2017]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@1d5ea518
+	//	2017-05-24 06:14:35.245  INFO 11936 --- [nio-8001-exec-3] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@500b222: startup date [Wed May 24 06:14:35 IST 2017]; root of context hierarchy
+	//	2017-05-24 06:14:35.324  INFO 11936 --- [nio-8001-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Users/krishna/AppData/Local/Temp/config-repo-5181068114537061714/configdata/lucky-word-client.yml
+	//	2017-05-24 06:14:35.325  INFO 11936 --- [nio-8001-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: file:/C:/Users/krishna/AppData/Local/Temp/config-repo-5181068114537061714/configdata/application.yml
+	//	2017-05-24 06:14:35.325  INFO 11936 --- [nio-8001-exec-3] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@500b222: startup date [Wed May 24 06:14:35 IST 2017]; root of context hierarchy
+	//	2017-05-24 06:14:36.185  INFO 11936 --- [io-8001-exec-10] o.s.cloud.bus.event.RefreshListener      : Received remote refresh request. Keys refreshed []
+
 }
